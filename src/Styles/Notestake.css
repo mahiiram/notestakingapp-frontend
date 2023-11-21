@@ -15,7 +15,7 @@
 }
 
 .Note {
-    height: 100px;
+    height: 100%;
     width: 100%;
     font-size: 20px;
     border-radius: 8px;
@@ -66,7 +66,7 @@
     }
     
     .Note {
-        height: 100px;
+        height: 100%;
         width: 100%;
         font-size: 20px;
         border-radius: 8px;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link,NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from 'axios';
 import "../Styles/Notestake.css"
@@ -10,7 +10,7 @@ function Notestake() {
   const [noteList, setNoteList] = useState([])
 
   useEffect(() => {
-    
+
     const intervalId = setInterval(() => {
       axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/notes`).then((res) => {
         console.log(res.data)
@@ -38,7 +38,9 @@ function Notestake() {
             <div className='Note' key={index}>
               <div className='Notecontent'><h6>
                 {note.title}</h6>
-                <p>{note.note}</p>
+                <p>{note.note.length > 20 ?
+                  `${note.note.substring(0, 20)}...` : note.note
+                }</p>
               </div>
               <div>
                 <span className='Deleteicon' onClick={() => handleDelete(note._id)}>

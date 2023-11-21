@@ -11,15 +11,14 @@ function Allnotescard() {
     const [noteList, setNoteList] = useState([])
 
     useEffect(() => {
-        
+
         const intervalId = setInterval(() => {
             axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/notes`).then((res) => {
-            console.log(res.data)
-            setNoteList(res.data.notes)
-        }).catch((err) => console.log(err))
+                console.log(res.data)
+                setNoteList(res.data.notes)
+            }).catch((err) => console.log(err))
         }, 1000);
     }, [])
-    console.log(noteList)
     const handleDelete = (id) => {
         deleteNote(id).then((res) => console.log(res)).catch((err) => console.log(err))
     }
@@ -40,14 +39,16 @@ function Allnotescard() {
                             <div className='Note' key={index}>
                                 <div className='Notecontent'><h6>
                                     {note.title}</h6>
-                                    <p>{note.note}</p>
+                                    <p>{note.note.length > 20 ?
+                                        `${note.note.substring(0, 20)}...` : note.note
+                                    }</p>
                                 </div>
                                 <div>
                                     <span className='Deleteicon' onClick={() => handleDelete(note._id)}>
                                         <DeleteIcon />
                                     </span>
                                     <NavLink to={`/update/${note._id}`}>
-                                    <EditIcon />
+                                        <EditIcon />
                                     </NavLink>
                                 </div>
 
