@@ -10,13 +10,13 @@ function Notestake() {
   const [noteList, setNoteList] = useState([])
 
   useEffect(() => {
-    axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/notes`).then((res) => {
-      console.log(res.data)
-      setNoteList(res.data.notes)
-    }).catch((err) => console.log(err))
-    // const intervalId = setInterval(() => {
-
-    // }, 3000);
+    
+    const intervalId = setInterval(() => {
+      axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/notes`).then((res) => {
+        console.log(res.data)
+        setNoteList(res.data.notes)
+      }).catch((err) => console.log(err))
+    }, 1000);
   }, [])
   console.log(noteList)
 
