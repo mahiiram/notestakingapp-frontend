@@ -1,0 +1,61 @@
+
+.model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Maindiv{
+    height: 100%;
+    width: 400px;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;   
+}
+
+
+.imageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform .2s;
+}
+
+.text {
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+}
+.form-div{
+    display: flex;
+    justify-content: center;
+}
+.button-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.button{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+input[type='file']{
+    display: none;
+    
+}
+.input-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 10px 10px 10px;
+}

@@ -1,0 +1,146 @@
+.CreateForm {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.FormContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormContent > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NoteForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inputtitle{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    outline: none;
+    border: 2px solid rgb(20, 18, 1);
+
+}
+
+.TextHead {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.NoteText {
+    height: 250px;
+    width: 500px;
+    background-color: white;
+    outline: none;
+    border: 2px solid rgb(20, 18, 1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+}
+
+.CreateNoteBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    background-color: rgb(255, 217, 0);
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.CreateNoteBtn:hover {
+    background: none;
+    color: rgb(255, 217, 0);
+    border: 2px solid rgb(255, 217, 0);
+}
+
+@media screen and (max-width:600px) {
+    .CreateForm {
+        display: flex;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        position: relative;
+    }
+    
+    .FormContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .FormContent > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .NoteForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .TextHead {
+        display: flex;
+        justify-content: center;
+        font-size: 27px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+    
+    .NoteText {
+        height: 300px;
+        width: 250px;
+        background-color: white;
+        outline: none;
+        border: 2px solid rgb(20, 18, 1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+    }
+    
+    .CreateNoteBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        background-color: rgb(255, 217, 0);
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+    
+    .CreateNoteBtn:hover {
+        background: none;
+        color: rgb(255, 217, 0);
+        border: 2px solid rgb(255, 217, 0);
+    }
+}
