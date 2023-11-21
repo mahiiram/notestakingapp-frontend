@@ -1,7 +1,4 @@
-.HomeNotes {
-    font-weight: lighter;
-    cursor: default;
-}
+
 
 .NoteList {
     padding-top: 20px;
@@ -48,10 +45,14 @@
 }
 
 
-@media screen and (max-width:300px) {
-    .HomeNotes {
+@media screen and (max-width:600px) {
+    .homenotes {
+        display: none;
         font-weight: lighter;
         cursor: default;
+        position: relative;
+        top: 10px;
+        right: 20p;
     }
     
     .NoteList {
