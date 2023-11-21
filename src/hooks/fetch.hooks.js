@@ -11,7 +11,7 @@ export default function useFetch(query){
             try {
                 setData(prev => ({ ...prev, isLoading: true}));
     
-                const { data, status } = await axios.get(`http://localhost:5000/api/${query}`);
+                const { data, status } = await axios.get(`https://notes-taking-app-i0ij.onrender.com/api/${query}`);
                 console.log(data)
 
                 if(status === 201){

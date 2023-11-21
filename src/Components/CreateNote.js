@@ -18,7 +18,7 @@ const CreateNote = () => {
         note
       }
       try {
-        const response = await axios.post(`http://localhost:5000/api/newNote`, noteObj)
+        const response = await axios.post(`https://notes-taking-app-i0ij.onrender.com/api/newNote`, noteObj)
         toast.success('Note posted successfully!')
         console.log(response.data);
       } catch (error) {

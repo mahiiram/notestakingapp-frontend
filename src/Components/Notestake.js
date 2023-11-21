@@ -10,7 +10,7 @@ function Notestake() {
   const [noteList, setNoteList] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/get/notes`).then((res) => {
+    axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/notes`).then((res) => {
       console.log(res.data)
       setNoteList(res.data.notes)
     }).catch((err) => console.log(err))

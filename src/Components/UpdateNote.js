@@ -16,7 +16,7 @@ function UpdateNote() {
     useEffect(() => {
         
         const intervalId = setInterval(() => {
-            axios.get(`http://localhost:5000/api/get/${paramid}`).then((res) => {
+            axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/${paramid}`).then((res) => {
                 console.log(res.data)
                 setTitle(res.data.notes.title)
                 setNote(res.data.notes.note)
@@ -26,7 +26,7 @@ function UpdateNote() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:5000/api/update/${paramid}`, {
+            const response = await axios.put(`https://notes-taking-app-i0ij.onrender.com/api/update/${paramid}`, {
                 title: updatetitle.toString(),
                 note: updatenote.toString(),
             })
