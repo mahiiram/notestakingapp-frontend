@@ -14,14 +14,11 @@ function UpdateNote() {
     const id = useParams()
     const paramid = id.id
     useEffect(() => {
-        
-        const intervalId = setInterval(() => {
-            axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/${paramid}`).then((res) => {
+        axios.get(`https://notes-taking-app-i0ij.onrender.com/api/get/${paramid}`).then((res) => {
                 console.log(res.data)
                 setTitle(res.data.notes.title)
                 setNote(res.data.notes.note)
             }).catch((err) => console.log(err))
-        }, 1000);
     }, [])
     const handleSubmit = async (e) => {
         e.preventDefault();
