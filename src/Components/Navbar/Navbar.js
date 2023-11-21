@@ -28,7 +28,7 @@ function Navbar() {
         <div>
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <NavLink to={'/'}><h1>Take Notes</h1></NavLink>
+                    <NavLink to={'/'}><h1 style={{textDecoration:'none',color:'#f5bf42'}}>Take Notes</h1></NavLink>
                    <div className="d-grid gap-1 d-md-block">
                     {!isLoggedIn ? (
                       <>
