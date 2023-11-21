@@ -1,9 +1,9 @@
 import React from 'react';
-import {NavLink } from 'react-router-dom';
+import {NavLink, useNavigate } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
 function Navbar() {
-
+       const navigate = useNavigate()
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
@@ -23,6 +23,7 @@ function Navbar() {
         localStorage.removeItem('username')
         localStorage.removeItem('id')
         setIsLoggedIn(false);
+        navigate('/')
       };
     return (
         <div>
