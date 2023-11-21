@@ -26,7 +26,7 @@ function Navbar() {
       };
     return (
         <div>
-            <nav className="navbar navbar-dark bg-dark">
+            <nav className="navbar navbar-dark bg-dark p-1">
                 <div className="container-fluid">
                     <NavLink to={'/'}><h1 style={{textDecoration:'none',color:'#f5bf42'}}>Take Notes</h1></NavLink>
                    <div className="d-grid gap-1 d-md-block">
@@ -36,7 +36,7 @@ function Navbar() {
                    <button className="btn btn-outline-warning" type="button">SignUp</button>
                    </NavLink>
                    <NavLink to={'/login'}>
-                   <button className="btn btn-outline-warning" type="button">SignIn</button>
+                   <button className="btn btn-outline-warning m-1" type="button">SignIn</button>
                    </NavLink> 
                       </>
                     ):(
@@ -44,7 +44,7 @@ function Navbar() {
                         <NavLink to={'/allnotes'} >
                         <button className="btn btn-outline-warning" type="button" >Notes</button>
                         </NavLink>
-                        <button className="btn btn-outline-warning" type="button" onClick={handleLogout}>Logout</button> 
+                        <button className="btn btn-outline-warning m-1" type="button" onClick={handleLogout}>Logout</button> 
                         </>
                     )}
                          
